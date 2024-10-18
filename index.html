@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Definierar dokumenttypen som HTML och ställer in språk till engelska -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Ställer in teckenkodning till UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Gör att sidan anpassar sig till olika skärmstorlekar -->
+    <title>Kanban</title>
+    <!-- Sätter sidans titel som visas i webbläsarfliken -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Länkar till extern CSS-fil för stil och layout -->
+</head>
+
+<body>
+    
+    <nav id="navbar" style="display: none;">
+        <!-- Navigationselement som är dolt tills vidare -->
+        <div class="navbar-container">
+            <span id="username-display"></span>
+            <!-- Visar användarnamn när användaren är inloggad -->
+            <button id="logout-button">Logout</button> 
+            <!-- Logout-knapp för att logga ut användaren -->
+        </div>
+    </nav>
+
+    <div id="login-container">
+        <!-- Innehåller inloggningsformuläret -->
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <!-- Inmatningsfält för användarnamn, kräver ett värde -->
+            <input type="password" id="password" placeholder="Password" required>
+            <!-- Inmatningsfält för lösenord, kräver ett värde -->
+            <button type="submit">Login</button>
+            <!-- Knapp för att skicka in inloggningsformuläret -->
+            <div id="login-error" style="display:none; color: red;">Invalid username or password</div>
+            <!-- Felmeddelande som visas vid ogiltiga inloggningsuppgifter -->
+        </form>
+    </div>
+
+    <div id="container" style="display: none;">
+        <!-- Huvudcontainer för Kanban-listorna, dold tills användaren loggar in -->
+        <div class="list">
+            <div class="box">
+                <h2>To Do</h2>
+                <!-- Rubrik för "To Do"-kolumnen -->
+                <div class="cards"></div>
+                <!-- Container för kort i "To Do"-kolumnen -->
+                <input type="text" class="inp" placeholder="Add new card">
+                <!-- Inmatningsfält för att lägga till ett nytt kort -->
+                <div class="button-container">
+                    <button class="btn">Add</button>
+                    <!-- Knapp för att lägga till ett nytt kort -->
+                    <button class="cancel-btn" style="display:none;">Cancel</button>
+                    <!-- Knapp för att avbryta kortläggning, dold tills vidare -->
+                </div>
+            </div>
+            <div class="box">
+                <h2>Doing</h2>
+                <!-- Rubrik för "Doing"-kolumnen -->
+                <div class="cards"></div>
+                <!-- Container för kort i "Doing"-kolumnen -->
+                <input type="text" class="inp" placeholder="Add new card">
+                <!-- Inmatningsfält för att lägga till ett nytt kort -->
+                <div class="button-container">
+                    <button class="btn">Add</button>
+                    <!-- Knapp för att lägga till ett nytt kort -->
+                    <button class="cancel-btn" style="display:none;">Cancel</button>
+                    <!-- Knapp för att avbryta kortläggning, dold tills vidare -->
+                </div>
+            </div>
+            <div class="box">
+                <h2>Testing</h2>
+                <!-- Rubrik för "Testing"-kolumnen -->
+                <div class="cards"></div>
+                <!-- Container för kort i "Testing"-kolumnen -->
+                <input type="text" class="inp" placeholder="Add new card">
+                <!-- Inmatningsfält för att lägga till ett nytt kort -->
+                <div class="button-container">
+                    <button class="btn">Add</button>
+                    <!-- Knapp för att lägga till ett nytt kort -->
+                    <button class="cancel-btn" style="display:none;">Cancel</button>
+                    <!-- Knapp för att avbryta kortläggning, dold tills vidare -->
+                </div>
+            </div>
+            <div class="box">
+                <h2>Done</h2>
+                <!-- Rubrik för "Done"-kolumnen -->
+                <div class="cards"></div>
+                <!-- Container för kort i "Done"-kolumnen -->
+                <input type="text" class="inp" placeholder="Add new card">
+                <!-- Inmatningsfält för att lägga till ett nytt kort -->
+                <div class="button-container">
+                    <button class="btn">Add</button>
+                    <!-- Knapp för att lägga till ett nytt kort -->
+                    <button class="cancel-btn" style="display:none;">Cancel</button>
+                    <!-- Knapp för att avbryta kortläggning, dold tills vidare -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <!-- Länkar till extern JavaScript-fil som körs som ett ES-modul -->
+</body>
+
+</html>

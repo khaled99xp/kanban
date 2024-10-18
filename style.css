@@ -1,0 +1,203 @@
+* {
+    margin: 0; /* Tar bort standardmarginaler */
+    padding: 0; /* Tar bort standardutfyllnad */
+    box-sizing: border-box; /* Ändrar box-modellen för att inkludera padding och border i elementets totala bredd och höjd */
+    font-family: 'Arial', sans-serif; /* Sätter standard typsnitt */
+}
+
+body {
+    background-color: #f4f4f9; /* Sätter bakgrundsfärgen för sidan */
+    color: #333; /* Sätter textfärgen */
+    font-size: 16px; /* Sätter standard textstorlek */
+    display: flex; /* Använder flexbox för layout */
+    justify-content: center; /* Centrerar innehållet horisontellt */
+    align-items: center; /* Centrerar innehållet vertikalt */
+    height: 100vh; /* Sätter höjden på body till 100% av viewportens höjd */
+    flex-direction: column; /* Använder kolumnlayout för flexbox */
+}
+
+#navbar {
+    background-color: #333; /* Sätter bakgrundsfärg för navigeringsfältet */
+    color: #fff; /* Sätter textfärg för navigeringsfältet */
+    padding: 1rem 2rem; /* Sätter padding runt navigeringsfältet */
+    position: fixed; /* Fixerar navigeringsfältet i toppen av sidan */
+    top: 0; /* Sätter det till toppen */
+    left: 0; /* Sätter det till vänster */
+    right: 0; /* Sätter det till höger */
+    display: flex; /* Använder flexbox för navigeringsfältet */
+    justify-content: space-between; /* Fördelar utrymmet mellan elementen */
+    align-items: center; /* Centrerar elementen vertikalt */
+    z-index: 100; /* Sätter z-index för att säkerställa att det är ovanpå andra element */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lägger till skugga under navigeringsfältet */
+}
+
+#navbar .navbar-container {
+    display: flex; /* Använder flexbox för navbar-container */
+    align-items: center; /* Centrerar elementen vertikalt */
+}
+
+#username-display {
+    font-size: 1.2rem; /* Sätter textstorleken för användarnamn */
+    margin-right: 1rem; /* Lägger till marginal till höger */
+}
+
+#logout-button {
+    background-color: #e74c3c; /* Sätter bakgrundsfärg för logga ut-knappen */
+    color: #fff; /* Sätter textfärg för logga ut-knappen */
+    border: none; /* Tar bort standardram */
+    padding: 0.5rem 1rem; /* Sätter padding runt knappen */
+    border-radius: 4px; /* Gör hörnen rundade */
+    cursor: pointer; /* Ändrar muspekaren till en pekare vid hover */
+    transition: background-color 0.3s; /* Lägger till en övergångseffekt för bakgrundsfärgen */
+}
+
+#logout-button:hover {
+    background-color: #c0392b; /* Ändrar bakgrundsfärgen vid hover */
+}
+
+#login-container {
+    background-color: #fff; /* Sätter bakgrundsfärg för inloggningscontainern */
+    padding: 2rem; /* Sätter padding runt inloggningsformuläret */
+    border-radius: 8px; /* Gör hörnen rundade */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lägger till skugga runt inloggningscontainern */
+}
+
+#login-form {
+    display: flex; /* Använder flexbox för inloggningsformuläret */
+    flex-direction: column; /* Använder kolumnlayout för flexbox */
+    gap: 1rem; /* Lägger till avstånd mellan elementen */
+}
+
+#login-form input {
+    padding: 0.75rem; /* Sätter padding för inmatningsfält */
+    border: 1px solid #ddd; /* Lägger till en ljusgrå ram */
+    border-radius: 4px; /* Gör hörnen rundade */
+    font-size: 1rem; /* Sätter textstorlek för inmatningsfältet */
+}
+
+#login-form button {
+    background-color: #3498db; /* Sätter bakgrundsfärg för inloggningsknappen */
+    color: #fff; /* Sätter textfärg för inloggningsknappen */
+    border: none; /* Tar bort standardram */
+    padding: 0.75rem; /* Sätter padding runt knappen */
+    border-radius: 4px; /* Gör hörnen rundade */
+    cursor: pointer; /* Ändrar muspekaren till en pekare vid hover */
+    transition: background-color 0.3s; /* Lägger till en övergångseffekt för bakgrundsfärgen */
+}
+
+#login-form button:hover {
+    background-color: #2980b9; /* Ändrar bakgrundsfärgen vid hover */
+}
+
+#login-error {
+    color: #e74c3c; /* Sätter textfärg för inloggningsfel */
+    font-size: 0.9rem; /* Sätter textstorlek för inloggningsfel */
+}
+
+#container {
+    margin-top: 5rem; /* Lägger till marginal överst för containern */
+    display: flex; /* Använder flexbox för containern */
+    gap: 1.5rem; /* Lägger till avstånd mellan boxarna */
+    justify-content: center; /* Centrerar boxarna horisontellt */
+    align-items: flex-start; /* Justerar boxarna till toppen */
+}
+
+.list {
+    display: flex; /* Använder flexbox för listan */
+    gap: 1.5rem; /* Lägger till avstånd mellan boxarna */
+    width: 100%; /* Sätter bredden på listan till 100% */
+}
+
+.box {
+    background-color: #fff; /* Sätter bakgrundsfärg för boxarna */
+    border-radius: 8px; /* Gör hörnen rundade */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lägger till skugga runt boxarna */
+    padding: 1rem; /* Sätter padding runt boxarna */
+    width: 250px; /* Sätter bredden på boxarna */
+    flex-grow: 0; /* Förhindrar boxarna från att växa */
+    max-height: 600px; /* Sätter maxhöjd på boxarna */
+    display: flex; /* Använder flexbox för boxarna */
+    flex-direction: column; /* Använder kolumnlayout för boxarna */
+    overflow-y: auto; /* Lägger till vertikal rullningslist om innehållet överskrider boxens höjd */
+}
+
+.box h2 {
+    color: #3498db; /* Sätter textfärg för boxrubriker */
+    font-size: 1.4rem; /* Sätter textstorlek för boxrubriker */
+    margin-bottom: 1rem; /* Lägger till marginal under rubriken */
+    text-align: center; /* Centrerar rubriken */
+}
+
+.cards {
+    min-height: 200px; /* Sätter minimi höjd för kortcontainern */
+    border: 1px dashed #ddd; /* Lägger till en streckad ram runt kortcontainern */
+    border-radius: 4px; /* Gör hörnen rundade */
+    padding: 1rem; /* Sätter padding runt kortcontainern */
+    background-color: #f9f9f9; /* Sätter bakgrundsfärg för kortcontainern */
+}
+
+.inp {
+    padding: 0.75rem; /* Sätter padding för inmatningsfält */
+    border: 1px solid #ddd; /* Lägger till en ljusgrå ram */
+    border-radius: 4px; /* Gör hörnen rundade */
+    margin-top: 1rem; /* Lägger till marginal överst */
+    font-size: 1rem; /* Sätter textstorlek för inmatningsfältet */
+}
+
+.button-container {
+    display: flex; /* Använder flexbox för knapcontainern */
+    justify-content: space-between; /* Fördelar utrymmet mellan knapparna */
+    margin-top: 1rem; /* Lägger till marginal överst för knapcontainern */
+}
+
+.button-container .btn {
+    background-color: #2ecc71; /* Sätter bakgrundsfärg för lägg till-knappen */
+    color: #fff; /* Sätter textfärg för lägg till-knappen */
+    border: none; /* Tar bort standardram */
+    padding: 0.5rem 1rem; /* Sätter padding runt knappen */
+    border-radius: 4px; /* Gör hörnen rundade */
+    cursor: pointer; /* Ändrar muspekaren till en pekare vid hover */
+    transition: background-color 0.3s; /* Lägger till en övergångseffekt för bakgrundsfärgen */
+}
+
+.button-container .btn:hover {
+    background-color: #27ae60; /* Ändrar bakgrundsfärgen vid hover */
+}
+
+.button-container .cancel-btn {
+    background-color: #e74c3c; /* Sätter bakgrundsfärg för avbryt-knappen */
+    color: #fff; /* Sätter textfärg för avbryt-knappen */
+    border: none; /* Tar bort standardram */
+    padding: 0.5rem 1rem; /* Sätter padding runt knappen */
+    border-radius: 4px; /* Gör hörnen rundade */
+    cursor: pointer; /* Ändrar muspekaren till en pekare vid hover */
+    transition: background-color 0.3s; /* Lägger till en övergångseffekt för bakgrundsfärgen */
+}
+
+.button-container .cancel-btn:hover {
+    background-color: #c0392b; /* Ändrar bakgrundsfärgen vid hover */
+}
+
+.delete-btn {
+    background-color: #e74c3c; /* Sätter bakgrundsfärg för ta bort-knappen */
+    color: #fff; /* Sätter textfärg för ta bort-knappen */
+    border: none; /* Tar bort standardram */
+    padding: 0.3rem 0.6rem; /* Sätter padding runt knappen */
+    border-radius: 4px; /* Gör hörnen rundade */
+    cursor: pointer; /* Ändrar muspekaren till en pekare vid hover */
+    font-size: 0.8rem; /* Sätter textstorlek för ta bort-knappen */
+    transition: background-color 0.3s; /* Lägger till en övergångseffekt för bakgrundsfärgen */
+    margin-bottom: 5px; /* Lägger till marginal under knappen */
+}
+
+.delete-btn:hover {
+    background-color: #c0392b; /* Ändrar bakgrundsfärgen vid hover */
+}
+
+p {
+    background-color: #2980b9; /* Sätter bakgrundsfärg för paragraf */
+    padding: 10px; /* Sätter padding runt paragrafen */
+    padding-bottom: 10px; /* Lägger till extra padding längst ner */
+    border-radius: 8px; /* Gör hörnen rundade */
+    color: #fff; /* Sätter textfärg för paragraf */
+}
