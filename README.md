@@ -61,7 +61,7 @@ This project is a **Kanban Board Application** developed in JavaScript, designed
 
 - **JavaScript (ES Modules)**: The project uses modular JavaScript to organize the code into separate files.
 - **HTML5**: For structuring the content.
-- **CSS3**: For styling the Kanban board.
+- **CSS**: For styling the Kanban board.
 - **LocalStorage**: Used to save the state of the board persistently.
 
 
